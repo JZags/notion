@@ -50,11 +50,45 @@ body{
     monthname[10] = "November";
     monthname[11] = "December";
     
+    var daysuffix = new Array(31);
+    daysuffix[0] = "1st";
+    daysuffix[1] = "2nd";
+    daysuffix[2] = "3rd";
+    daysuffix[3] = "4th";
+    daysuffix[4] = "5th";
+    daysuffix[5] = "6th";
+    daysuffix[6] = "7th";
+    daysuffix[7] = "8th";
+    daysuffix[8] = "9th";
+    daysuffix[9] = "10th";
+    daysuffix[10] = "11th";
+    daysuffix[11] = "12th";
+    daysuffix[12] = "13th";
+    daysuffix[13] = "14th";
+    daysuffix[14] = "15th";
+    daysuffix[15] = "16th";
+    daysuffix[16] = "17th";
+    daysuffix[17] = "18th";
+    daysuffix[18] = "19th";
+    daysuffix[19] = "20th";
+    daysuffix[20] = "21st";
+    daysuffix[21] = "22nd";
+    daysuffix[22] = "23rd";
+    daysuffix[23] = "24th";
+    daysuffix[24] = "25th";
+    daysuffix[25] = "26th";
+    daysuffix[26] = "27th";
+    daysuffix[27] = "28th";
+    daysuffix[28] = "29th";
+    daysuffix[29] = "30th";
+    daysuffix[30] = "31st";
+    
     var today = new Date();
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
     var monthOfYear = monthname[today.getMonth()];
-    var date = dayOfWeek+", " + monthOfYear + " " + today.getDate() +', ' + today.getFullYear()  ;
+    var suffixOfDay = daysuffix[today.getDate()];
+    var date = dayOfWeek+", " + monthOfYear + " " + suffixOfDay +', ' + today.getFullYear()  ;
 
     var greet;
 
